@@ -1,23 +1,34 @@
 #include <iostream>
-#include <vector>
 #include "menuorder.h"
 using namespace std;
 
+struct CartItem {
+    MenuItem item;
+};
+
 class Order {
-    vector<MenuItem> cart;
+    CartItem cart[50];   // fixed-size array for cart items
+    int count = 0;       // number of items added
     float total = 0.0;
 
 public:
     void addItem(const MenuItem& item) {
-        cart.push_back(item);
-        total += item.price;
-        cout << item.name << " added. Price: Rs " << item.price << endl;
+        if(count < 50) {
+            cart[count].item = item;
+            count++;
+            total += item.price;
+            cout << item.name << " added. Price: Rs " << item.price << endl;
+        } else {
+            cout << "Cart is full!" << endl;
+        }
     }
 
     void showCart() {
         cout << "\n--- Your Order ---\n";
-        for(auto &item : cart) {
-            cout << item.category << " - " << item.name << " : Rs " << item.price << endl;
+        for(int i = 0; i < count; i++) {
+            cout << cart[i].item.category << " - " 
+                 << cart[i].item.name << " : Rs " 
+                 << cart[i].item.price << endl;
         }
         cout << "Total: Rs " << total << endl;
     }
