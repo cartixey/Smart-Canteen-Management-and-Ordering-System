@@ -1,0 +1,18 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run canteen menu",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/canteen_menu",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "gdb",
+            "preLaunchTask": "Build canteen menu"
+        }
+    ]
+}

@@ -1,4 +1,3 @@
-// menu.h
 #ifndef MENU_H
 #define MENU_H
 
@@ -6,24 +5,23 @@
 extern "C" {
 #endif
 
-struct MenuItem {
-    const char* category;
-    const char* name;
+typedef struct MenuItem {
+    const char *category;
+    const char *name;
     float price;
-};
+} MenuItem;
 
-extern struct MenuItem kitchenMenu[];
+extern MenuItem kitchenMenu[];
 extern int kitchenCount;
 
-extern struct MenuItem confectioneryMenu[];
+extern MenuItem confectioneryMenu[];
 extern int confectioneryCount;
 
-extern void showKitchenMenu();
-extern void showConfectioneryMenu();
+void showKitchenMenu(void);
+void showConfectioneryMenu(void);
 
 #ifdef __cplusplus
 }
 #endif
 
 #endif
-

@@ -1,71 +1,53 @@
 #include <stdio.h>
 
-// Define a structure for menu items with price
-struct Menu {
-    char category[50];
-    char item[100];
-    float price;
+#include "menuorder.h"
+
+MenuItem kitchenMenu[] = {
+    {"Breakfast (South Indian)", "Idli", 30.0f},
+    {"Breakfast (South Indian)", "Vada", 25.0f},
+    {"Breakfast (South Indian)", "Masala Dosa", 60.0f},
+    {"Breakfast (North Indian)", "Aloo Paratha", 40.0f},
+    {"Breakfast (North Indian)", "Poori Bhaji", 50.0f},
+    {"Lunch", "Thali (Rice, Dal, Curry, Chapatis)", 120.0f},
+    {"Snacks", "Samosa", 20.0f},
+    {"Snacks", "Maggi Noodles", 40.0f},
+    {"Beverages", "Filter Coffee", 25.0f},
+    {"Beverages", "Hot Tea", 20.0f}
 };
 
-// Kitchen Menu
-void kmenu() {
-    struct Menu kitchen[] = {
-        {"Breakfast (South Indian)", "Idli", 30.0},
-        {"Breakfast (South Indian)", "Vada", 25.0},
-        {"Breakfast (South Indian)", "Masala Dosa", 60.0},
-        {"Breakfast (North Indian)", "Aloo Paratha", 40.0},
-        {"Breakfast (North Indian)", "Poori Bhaji", 50.0},
-        {"Lunch", "Thali (Rice, Dal, Curry, Chapatis)", 120.0},
-        {"Snacks", "Samosa", 20.0},
-        {"Snacks", "Maggi Noodles", 40.0},
-        {"Beverages", "Filter Coffee", 25.0},
-        {"Beverages", "Hot Tea", 20.0}
-    };
+int kitchenCount = sizeof kitchenMenu / sizeof kitchenMenu[0];
 
-    int n = sizeof(kitchen)/sizeof(kitchen[0]);
+MenuItem confectioneryMenu[] = {
+    {"Cakes & Pastries", "Chocolate Truffle Cake", 250.0f},
+    {"Cakes & Pastries", "Red Velvet Cake", 280.0f},
+    {"Cookies & Biscuits", "Chocolate Chip Cookies", 150.0f},
+    {"Cookies & Biscuits", "Butter Cookies", 120.0f},
+    {"Chocolates & Sweets", "Brownies", 100.0f},
+    {"Chocolates & Sweets", "Motichoor Laddoo", 80.0f},
+    {"Ice Creams", "Vanilla Scoop", 60.0f},
+    {"Ice Creams", "Sundae", 120.0f},
+    {"Specials", "Tiramisu", 300.0f},
+    {"Beverages", "Cold Coffee", 90.0f},
+    {"Beverages", "Milkshake", 120.0f}
+};
+
+int confectioneryCount = sizeof confectioneryMenu / sizeof confectioneryMenu[0];
+
+void showKitchenMenu()
+{
     printf("\n\t\tKitchen Menu\n");
-    for(int i=0; i<n; i++) {
-        printf("%s - %s : Rs %.2f\n", kitchen[i].category, kitchen[i].item, kitchen[i].price);
+    for (int i = 0; i < kitchenCount; i++) {
+        printf("%d. %s - %s : Rs %.2f\n", i + 1,
+               kitchenMenu[i].category, kitchenMenu[i].name,
+               kitchenMenu[i].price);
     }
 }
 
-// Confectionery Menu
-void cmenu() {
-    struct Menu confectionery[] = {
-        {"Cakes & Pastries", "Chocolate Truffle Cake", 250.0},
-        {"Cakes & Pastries", "Red Velvet Cake", 280.0},
-        {"Cookies & Biscuits", "Chocolate Chip Cookies", 150.0},
-        {"Cookies & Biscuits", "Butter Cookies", 120.0},
-        {"Chocolates & Sweets", "Brownies", 100.0},
-        {"Chocolates & Sweets", "Motichoor Laddoo", 80.0},
-        {"Ice Creams", "Vanilla Scoop", 60.0},
-        {"Ice Creams", "Sundae", 120.0},
-        {"Specials", "Tiramisu", 300.0},
-        {"Beverages", "Cold Coffee", 90.0},
-        {"Beverages", "Milkshake", 120.0}
-    };
-
-    int n = sizeof(confectionery)/sizeof(confectionery[0]);
+void showConfectioneryMenu() {
     printf("\n\t\tConfectionery Menu\n");
-    for(int i=0; i<n; i++) {
-        printf("%s - %s : Rs %.2f\n", confectionery[i].category, confectionery[i].item, confectionery[i].price);
+    for (int i = 0; i < confectioneryCount; i++) {
+        printf("%d. %s - %s : Rs %.2f\n", i + 1,
+               confectioneryMenu[i].category, confectioneryMenu[i].name,
+               confectioneryMenu[i].price);
     }
-}
-
-int menu() {
-    int choice;
-    printf("Select 1 for kitchen menu and 2 for confectionery menu\n");
-    scanf("%d", &choice);
-
-    switch(choice) {
-        case 1: kmenu(); break;
-        case 2: cmenu(); break;
-        default: printf("ERROR\n");
-    }
-    return 0;
-}
-
-int main() {
-    menu();
-    return 0;
 }

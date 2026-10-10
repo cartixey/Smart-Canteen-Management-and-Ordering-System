@@ -1,0 +1,21 @@
+{
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "Build canteen menu",
+            "command": "gcc -std=c11 -Wall -Wextra -Wpedantic -c menu.c -o menu.o && g++ -std=c++17 -Wall -Wextra -Wpedantic main.cpp order.cpp menu.o -o canteen_menu",
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Compiles the C menu module and links it with the C++ ordering program."
+        }
+    ],
+    "version": "2.0.0"
+}
