@@ -3,7 +3,7 @@
         {
             "type": "shell",
             "label": "Build canteen menu",
-            "command": "gcc -std=c11 -Wall -Wextra -Wpedantic -c menu.c -o menu.o && g++ -std=c++17 -Wall -Wextra -Wpedantic main.cpp order.cpp menu.o -o canteen_menu",
+            "command": "gcc -std=c11 -Wall -Wextra -Wpedantic -c menu.c -o menu.o && gcc -std=c11 -Wall -Wextra -Wpedantic -c confirmedorders.c -o confirmedorders.o && gcc -std=c11 -Wall -Wextra -Wpedantic -c kitchen_queue.c -o kitchen_queue.o && gcc -std=c11 -Wall -Wextra -Wpedantic -c logs.c -o logs.o && g++ -std=c++17 -Wall -Wextra -Wpedantic main.cpp ordering.cpp seating.cpp menu.o confirmedorders.o kitchen_queue.o logs.o -o canteen_menu",
             "options": {
                 "cwd": "${workspaceFolder}"
             },
@@ -14,7 +14,7 @@
                 "kind": "build",
                 "isDefault": true
             },
-            "detail": "Compiles the C menu module and links it with the C++ ordering program."
+            "detail": "Builds the C menu, order, kitchen queue, and logging modules with the C++ application."
         }
     ],
     "version": "2.0.0"

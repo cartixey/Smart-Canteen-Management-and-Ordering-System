@@ -1,0 +1,80 @@
+
+================================
+Date & Time : 27-10-2026 05:54:00
+Student ID  : 21335543785
+Total Bill  : 120.00
+Items:
+Sundae : Rs 120.00
+================================
+
+================================
+Date & Time : 27-10-2026 06:04:21
+Student ID  : 7732242422
+Total Bill  : 105.00
+Items:
+Idli : Rs 30.00
+Poori Bhaji : Rs 50.00
+Vada : Rs 25.00
+================================
+
+================================
+Status      : Paid
+Date & Time : 27-10-2026 06:45:29
+Order ID    : ORD00000001
+Student ID  : 3242353345
+Total Bill  : 20.00
+Items:
+Hot Tea : Rs 20.00
+================================
+
+================================
+Status      : Paid
+Date & Time : 27-10-2026 06:46:23
+Order ID    : ORD00000002
+Student ID  : 37623473
+Total Bill  : 120.00
+Items:
+Sundae : Rs 120.00
+================================
+
+================================
+Status      : Paid
+Date & Time : 27-10-2026 06:46:40
+Order ID    : ORD00000003
+Student ID  : 35323234
+Total Bill  : 65.00
+Items:
+Filter Coffee : Rs 25.00
+Aloo Paratha : Rs 40.00
+================================
+
+================================
+Status      : Paid
+Date & Time : 27-10-2026 06:51:39
+Order ID    : ORD00000004
+Student ID  : 2322321224
+Total Bill  : 300.00
+Items:
+Tiramisu : Rs 300.00
+================================
+
+================================
+Status      : Paid
+Date & Time : 22-11-2026 17:53:30
+Order ID    : ORD00000008
+Student ID  : 123
+Seat        : 1
+Total Bill  : 30.00
+Items:
+Idli : Rs 30.00
+================================
+
+================================
+Status      : Paid
+Date & Time : 22-11-2026 18:05:47
+Order ID    : ORD00000007
+Student ID  : 5777984
+Total Bill  : 60.00
+Items:
+Masala Dosa : Rs 60.00
+================================

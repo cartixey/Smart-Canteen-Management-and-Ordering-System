@@ -15,7 +15,6 @@ Table::Table(int number, int seats) {
 }
 
 void Table::displayInfo() const {
-
     std::cout << "Table " << tableNumber
               << " | " << capacity << " seats | ";
 
@@ -27,7 +26,6 @@ void Table::displayInfo() const {
 }
 
 bool Table::reserveTable() {
-
     if (occupied) {
         return false;
     }
@@ -48,25 +46,18 @@ bool Table::isOccupied() const {
     return occupied;
 }
 
-
-
-
 Table tables[] = {
-
     Table(1, 2),
     Table(2, 2),
     Table(3, 4),
     Table(4, 4),
     Table(5, 6),
     Table(6, 6)
-
 };
 
 int tableCount = sizeof(tables) / sizeof(tables[0]);
 
-
-void showSeatingArrangement() {
-
+extern "C" void showSeatingArrangement() {
     std::cout << "\n----- SEATING ARRANGEMENT -----\n";
 
     for (int i = 0; i < tableCount; i++) {
@@ -74,12 +65,16 @@ void showSeatingArrangement() {
     }
 }
 
-
-bool reserveTable(int tableNumber) {
-
+extern "C" int reserveTable(int tableNumber) {
     if (tableNumber < 1 || tableNumber > tableCount) {
         return false;
     }
 
-    return tables[tableNumber - 1].reserveTable();
+    return tables[tableNumber - 1].reserveTable() ? 1 : 0;
+}
+
+extern "C" void releaseTable(int tableNumber) {
+    if (tableNumber >= 1 && tableNumber <= tableCount) {
+        tables[tableNumber - 1].releaseTable();
+    }
 }

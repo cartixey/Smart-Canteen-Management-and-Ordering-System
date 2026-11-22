@@ -1,0 +1,20 @@
+
+================================
+Status      : Expired unpaid
+Date & Time : 22-11-2026 17:48:27
+Order ID    : ORD00000006
+Student ID  : 9389539343
+Total Bill  : 120.00
+Items:
+Thali (Rice, Dal, Curry, Chapatis) : Rs 120.00
+================================
+
+================================
+Status      : Expired unpaid
+Date & Time : 22-11-2026 17:48:27
+Order ID    : ORD00000005
+Student ID  : 2435434525
+Total Bill  : 30.00
+Items:
+Idli : Rs 30.00
+================================

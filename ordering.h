@@ -11,6 +11,10 @@ class Order {
 public:
     void addItem(const MenuItem &item);
     void showCart() const;
+
+    MenuItem* getCart();
+    int getCount() const;
+    float getTotal() const;
 };
 
-#endif
+ #endif

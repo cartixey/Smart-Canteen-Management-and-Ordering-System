@@ -20,7 +20,16 @@ public:
     bool isOccupied() const;
 };
 
-void showSeatingArrangement();
-bool reserveTable(int tableNumber);
+#ifdef __cplusplus
+extern "C" {
+#endif
+
+void showSeatingArrangement(void);
+int reserveTable(int tableNumber);
+void releaseTable(int tableNumber);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif
