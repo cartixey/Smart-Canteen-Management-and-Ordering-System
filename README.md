@@ -40,12 +40,12 @@ Confectionery orders require immediate payment. They do not require seat allocat
 
 ## Admin Access
 
-To access the administrator menu, enter:
+To access the administrator menu, enter: 777
 
 The admin menu currently allows viewing the completed order logs.
 
 
-**Project Structure**
+## **Project Structure**
 
 **File	Description**
 main.cpp	Main application workflow
@@ -60,7 +60,7 @@ active_orders.txt	Persistent active order data
 logs.txt	Paid order records
 defaulters.txt	Expired unpaid order records
 
-**Requirements**
+## **Requirements**
 GCC
 G++
 C11-compatible compiler
@@ -68,7 +68,7 @@ C++17-compatible compiler
 Linux, macOS, or Windows with a suitable terminal environment
 
 
-**Order Lifecycle**
+## **Order Lifecycle**
 
 Create Order
      |
@@ -83,14 +83,14 @@ Active Unpaid Order
      +--> Two Hours Elapse ----> Order Added to Defaulters + Seat Released
 
 
-**Notes**
+## **Notes**
 Kitchen orders require a valid available seat.
 Confectionery orders are paid immediately.
 Active orders are saved between program runs.
 Order IDs are automatically generated.
 Existing text files are used for persistence and logging.
 
-**Future Improvements**
+## **Future Improvements**
 Graphical user interface
 Database-based storage
 Online payment integration
@@ -100,5 +100,5 @@ Order status tracking
 Receipt generation
 More advanced table and capacity management
 
-**License**
+## **License**
 This project is available for educational and personal use.
